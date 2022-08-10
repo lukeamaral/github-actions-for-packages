@@ -8,4 +8,4 @@ jobs:
   workflow-a-status:
     runs-on: 'ubuntu-latest'
     steps:
-      - run: echo "Workflow A completed ${{ github.event.workflow_run.conclusion }} "
+      - run: echo "Workflow A completed with conclusion status: '${{ github.event.workflow_run.conclusion }}'"
