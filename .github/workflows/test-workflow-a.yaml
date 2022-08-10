@@ -8,6 +8,8 @@ jobs:
     steps:
     - run: |
         echo "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        echo "${{ github.server_url }}"
+        echo "${{ github.repository }}"
         sleep 30
         exit 0
     - if: failure()
