@@ -1,8 +1,15 @@
 name: Workflow A
 on:
   push:
+  workflow_run:
+    workflows: ["Workflow B"]
+    types:
+    - completed
 jobs:
   failed-build:
     runs-on: 'ubuntu-latest'
     steps:
-      - run: sleep 30
+    - run: |
+        echo "Workflow B completed with conclusion status = '${{ github.event.workflow_run.conclusion }}'"
+        sleep 30
+        exit 1
