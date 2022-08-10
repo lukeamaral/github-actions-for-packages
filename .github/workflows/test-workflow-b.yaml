@@ -1,0 +1,11 @@
+name: Workflow B
+on:
+  workflow_run:
+    workflows: ["Workflow B"]
+    types:
+      - completed
+jobs:
+  workflow-a-status:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - run: echo "Workflow A completed {{ github.event.workflow_run.conclusion }} "
