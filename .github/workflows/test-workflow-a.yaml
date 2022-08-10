@@ -1,0 +1,8 @@
+name: Workflow A
+on:
+  push:
+  jobs:
+    failed-build:
+      runs-on: 'ubuntu-latest'
+      steps:
+        - run: exit 1
