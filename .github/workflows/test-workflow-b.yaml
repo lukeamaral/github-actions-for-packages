@@ -10,7 +10,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
     - run: |
-        echo "/repos/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.workflow_id }}/rerun"
+        echo "/repos/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}/rerun"
         echo "${{ github.event.workflow_run.rerun_url }}"
         echo "${{ github.event.workflow_run.run_attempt }}"
         curl \
