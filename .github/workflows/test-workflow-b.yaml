@@ -12,6 +12,7 @@ jobs:
     - env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        echo "/repos/${{ github.repository }}/actions/runs/${{ github.event.workflow.id }}/rerun"
         gh api \
           --method POST \
           -H "Accept: application/vnd.github+json" \
