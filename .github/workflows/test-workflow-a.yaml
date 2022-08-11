@@ -12,11 +12,3 @@ jobs:
         echo "${{ github.repository }}"
         sleep 30
         exit 1
-    - if: failure()
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh api \
-          --method POST \
-          -H "Accept: application/vnd.github+json" \
-          /repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/rerun
