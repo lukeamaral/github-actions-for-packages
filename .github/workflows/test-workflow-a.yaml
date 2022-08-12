@@ -3,8 +3,7 @@ name: Workflow A
 on:
   push:
     tags:
-      - 'v*.*.*'
-      - 'v*.*.*-develop.*'
+      - 'v1.2.0-develop.3'
 
 jobs:
   failed-build:
