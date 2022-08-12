@@ -1,9 +1,11 @@
 name: Workflow A
+
 on:
   push:
     tags:
       - 'v*.*.*'
       - 'v*.*.*-develop.*'
+
 jobs:
   failed-build:
     runs-on: 'ubuntu-latest'
