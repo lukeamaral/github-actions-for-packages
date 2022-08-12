@@ -2,8 +2,8 @@ name: Workflow A
 
 on:
   push:
-    tags:
-      - 'v1.2.0-develop.3'
+    branches:
+      - develop
 
 jobs:
   failed-build:
