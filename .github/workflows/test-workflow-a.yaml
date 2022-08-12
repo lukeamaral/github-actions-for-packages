@@ -2,8 +2,9 @@ name: Workflow A
 
 on:
   push:
-    branches:
-      - develop
+    tags:
+      - 'v*.*.*'
+      - 'v*.*.*-develop.*'
 
 jobs:
   failed-build:
